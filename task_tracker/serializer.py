@@ -5,5 +5,9 @@ class TaskTrackerSerializer(serializers.ModelSerializer):
 
     class Meta: # default özelliklerin belirlendiği yer
         model = TaskTracker
-        fields = "__all__"
+        # fields = "__all__"
         # exclude = []
+        exclude = [
+            "created_date",
+            "updated_date"
+        ]
